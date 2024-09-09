@@ -12,6 +12,7 @@ from PyQt5.QtWidgets import QApplication, QWidget
 app = QApplication(sys.argv)
 window = QWidget()
 window.resize(500, 500)
+# move 移动定位  从某个位置开始
 window.move(300, 300)
 window.setWindowTitle('hello PyQt5')
 window.show()
