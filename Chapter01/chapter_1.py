@@ -44,7 +44,7 @@ def demo1():
     #
     widget = QtWidgets.QWidget()
     # 设置大小尺寸
-    widget.resize(180, 360)
+    widget.resize(360, 360)
     # 标题
     widget.setWindowTitle("hello,pyqt5")
     # 展示
