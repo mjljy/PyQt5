@@ -25,6 +25,12 @@ class QTalbeWidget_test(QTableWidget):
         self.setFocusPolicy(Qt.NoFocus)
         # setHorizontalHeaderLabels  设置QTableWidget表格控件的水平标签
         # self.setHorizontalHeaderLabels(self.column_name)
+        # 设置焦点可以让应用更便捷
+        # 比如当你打开百度主页或其他带有编辑框的页面时，不需要先用鼠标点击编辑框就可以直接输入文字等信息到其中
+        # 这就是由于搜索框设置了焦点
+        # 一个空间要先设置它焦点事件的模式，即窗口如何接受焦点事件（通过鼠标单击、Tab键、不接受焦点事件等）
+        # Qt::NoFocus 不能通过上两种方式获得焦点(默认值),setFocus仍可使其获得焦点.
+
 
 
 

@@ -59,7 +59,7 @@ class MyButton( QToolButton):
         # 设置按钮尺寸
         self.setFixedSize( QSize(800,120))
         # 设置按钮背景颜色
-        self.setStyleSheet('''background-color:red;''')
+        self.setStyleSheet('''background-color:blue;''')
 
     def mousePressEvent(self,event):
         '''鼠标按下事件'''

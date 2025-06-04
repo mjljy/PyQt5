@@ -25,7 +25,8 @@ class DemoApp(QWidget):
         self.setLayout(layout)
 
         self.setWindowTitle('PyQt5 Demo')
-        self.setGeometry(300, 300, 300, 200)
+        # self.setGeometry(300, 300, 300, 200)
+        self.showMaximized()
         self.show()
 
     def on_click(self):

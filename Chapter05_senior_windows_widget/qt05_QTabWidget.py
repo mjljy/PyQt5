@@ -10,14 +10,20 @@
 import sys
 from PyQt5.QtCore import *
 from PyQt5.QtGui import *
+
 from PyQt5.QtWidgets import *
           
 class TabDemo(QTabWidget):
+	"""
+	QTabWidget 提供了一个选项卡和一个页面区域
+
+	"""
 	def __init__(self, parent=None):
 		super(TabDemo, self).__init__(parent)   
-		self.tab1 = QWidget()
+		self.tab1 = QWidget() # 创建一个窗口  默认   白色 顶栏  左上角title是python
 		self.tab2 = QWidget()
 		self.tab3 = QWidget()
+		# addTab(QWidget, str 名字) → int
 		self.addTab(self.tab1,"Tab 1")
 		self.addTab(self.tab2,"Tab 2")
 		self.addTab(self.tab3,"Tab 3")
@@ -25,6 +31,14 @@ class TabDemo(QTabWidget):
 		self.tab2UI()
 		self.tab3UI()
 		self.setWindowTitle("Tab 例子")
+
+		desktop = QApplication.desktop()
+		#获取桌面可用尺寸
+		rect = desktop.availableGeometry()
+		self.setGeometry(rect)
+
+
+
 		
 	def tab1UI(self):
 		layout = QFormLayout()
@@ -44,7 +58,7 @@ class TabDemo(QTabWidget):
 		self.tab2.setLayout(layout)
 		
 	def tab3UI(self):
-		layout=QHBoxLayout()
+		layout= QHBoxLayout()
 		layout.addWidget(QLabel("科目"))
 		layout.addWidget(QCheckBox("物理"))
 		layout.addWidget(QCheckBox("高数"))
