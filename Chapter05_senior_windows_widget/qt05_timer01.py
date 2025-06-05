@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*- 
 '''
-    【简介】
-    PyQT5中 QTimer例子
+	【简介】
+	PyQT5中 QTimer例子
  
   
 '''
@@ -21,9 +21,9 @@ class WinForm(QWidget):
 		self.endBtn = QPushButton('结束') 
 		layout = QGridLayout(self) 
 
-        # 初始化一个定时器
+		# 初始化一个定时器
 		self.timer = QTimer(self)
-        # showTime()方法
+		# showTime()方法
 		self.timer.timeout.connect(self.showTime)
 		
 		layout.addWidget(self.label,0,0,1,2)   
@@ -44,7 +44,7 @@ class WinForm(QWidget):
 		self.label.setText( timeDisplay ) 
 
 	def startTimer(self): 
-        # 设置计时间隔并启动
+		# 设置计时间隔并启动
 		self.timer.start(1000)
 		self.startBtn.setEnabled(False)
 		self.endBtn.setEnabled(True)
